@@ -14,26 +14,35 @@
     // c = (a / b);
     // alert(a + '/' + b + '=' + c);
 
-    let a= prompt("Enter number a");
-    let b= prompt("Enter number b");
-    let c= 0;
+    let a= prompt('Enter number a');
 
     if(isNaN(a)){
         alert('You can only enter numbers');
-    }else if (isNaN(b)){
-        alert('You can only enter numbers');
+        a = prompt('try again')
     }
 
-    c = (Number(a) + Number(b));
+    let b= prompt('Enter number b');
+
+    if (isNaN(b)){
+        alert('You can only enter numbers');
+        b = prompt('try again')
+
+    }
+    a = Number(a)
+    b = Number(b)
+
+    let c;
+
+    c = (a + b);
     alert(a + '+' + b + '=' + c);
 
-    c = (Number(a) - Number(b));
+    c = (a - b);
     alert(a + '-' + b + '=' + c);
 
-    c = (Number(a) * Number(b));
+    c = (a * b);
     alert(a + '*' + b + '=' + c);
 
-    c = (Number(a) / Number(b));
+    c = (a / b);
     alert(a + '/' + b + '=' + c);
 
 
