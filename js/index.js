@@ -1,49 +1,26 @@
-    // let a= parseInt(prompt("Enter number a"));
-    // let b= parseInt(prompt("Enter number b"));
-    // let c= 0;
-    //
-    // c = (a + b);
-    // alert(a + '+' + b + '=' + c);
-    //
-    // c = (a - b);
-    // alert(a + '-' + b + '=' + c);
-    //
-    // c = (a * b);
-    // alert(a + '*' + b + '=' + c);
-    //
-    // c = (a / b);
-    // alert(a + '/' + b + '=' + c);
+    let value1;
+    let value2;
+    let result;
 
-    let a= prompt('Enter number a');
+    do {
+        value1 = prompt('Enter first value');
+    } while ( isNaN(value1) );
 
-    if(isNaN(a)){
-        alert('You can only enter numbers');
-        a = prompt('try again')
-    }
+    do {
+        value2 = prompt('Enter second value');
+    } while ( isNaN(value2) );
 
-    let b= prompt('Enter number b');
+    const convertedData1 = Number(value1)
+    const convertedData2 = Number(value2)
 
-    if (isNaN(b)){
-        alert('You can only enter numbers');
-        b = prompt('try again')
+    result = (convertedData1 + convertedData2);
+    alert(`${convertedData1} + ${convertedData2} = ${result}`);
 
-    }
-    a = Number(a)
-    b = Number(b)
+    result = (convertedData1 - convertedData2);
+    alert(`${convertedData1} - ${convertedData2} = ${result}`);
 
-    let c;
+    result = (convertedData1 * convertedData2);
+    alert(`${convertedData1} * ${convertedData2} = ${result}`);
 
-    c = (a + b);
-    alert(a + '+' + b + '=' + c);
-
-    c = (a - b);
-    alert(a + '-' + b + '=' + c);
-
-    c = (a * b);
-    alert(a + '*' + b + '=' + c);
-
-    c = (a / b);
-    alert(a + '/' + b + '=' + c);
-
-
-
+    result = (convertedData1 / convertedData2);
+    alert(`${convertedData1} / ${convertedData2} = ${result}`);
